@@ -1,17 +1,21 @@
-let sliderInput = document.querySelector(".slider__input");
-let sliderImage = document.querySelector(".slider__image");
-let box = document.querySelector("#box");
+const range = document.querySelector("#slider-range");
+const image = document.querySelector("#slider-image");
 
-let updateImageSize = _.debounce(() => {
-  let scale = sliderInput.value / 50;
-  sliderImage.style.transform = `scale(${scale})`;
-}, 100);
+document.addEventListener(
+  "input",
+  _.debounce(() => {
+    image.style.width = `${range.value * 4}px`;
+  }, 50)
+);
 
-sliderInput.addEventListener("input", updateImageSize);
+console.dir();
 
-let moveBox = _.debounce((event) => {
-  box.style.left = `${event.clientX - 25}px`;
-  box.style.top = `${event.clientY - 25}px`;
-}, 100);
+const box = document.querySelector("#box");
 
-document.addEventListener("mousemove", moveBox);
+document.addEventListener(
+  "mousemove",
+  _.debounce((e) => {
+    box.style.left = e.clientX - box.scrollWidth / 2 + "px";
+    box.style.top = e.clientY - box.scrollHeight / 2 + "px";
+  }, 100)
+);

@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JS2-HW2</title>
-  <script src="./style.css"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
-</head>
-<body>
-  <div class="slider">
-    <input type="range" min="1" max="100" value="50" class="slider__input" />
-    <img width="300" height="300" src="https://i.namu.wiki/i/PflUPlIFSW1F23vc04Ic8zRzs4ddcXN0xjuRh083CwS-1qjPOR3PQ4ihfBPEoy9S0cZ8b9K83-_Olrt9WttEqQ.webp" class="slider__image" />
-  </div>
-  <div id="box"></div>
- <script src="./index.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS2-HW2</title>
+<link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+  </head>
+  <body>
+   <script src="./index.js"></script>
+    <div class="slider">
+      <input
+        id="slider-range"
+        type="range"
+        min="1"
+        max="100"
+        value="50"
+        class="slider__input"
+      />
+      <img
+        id="slider-image"
+        src="https://i.namu.wiki/i/PflUPlIFSW1F23vc04Ic8zRzs4ddcXN0xjuRh083CwS-1qjPOR3PQ4ihfBPEoy9S0cZ8b9K83-_Olrt9WttEqQ.webp"
+        class="slider__image"
+      />
+    </div>
+    <div id="box"></div>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="./index.js" type="module"></script>
+  </body>
 </html>
